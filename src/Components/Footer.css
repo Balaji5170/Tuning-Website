@@ -1,0 +1,93 @@
+.footer {
+  background: url('./assets/Outline.jpg') center/cover no-repeat;
+  color: #f5f5f5;
+  padding: 60px 20px 30px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 -4px 20px rgba(255, 215, 0, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Brand */
+.footer-brand h2 {
+  color: #ff3c00;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.footer-brand h2 span {
+  color: #ffffff;
+}
+
+.footer-brand p {
+  color: #ccc;
+  max-width: 260px;
+  font-size: 0.95rem;
+}
+
+/* Links */
+.footer-links h3,
+.footer-contact h3 {
+  color: #ff3c00;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #bcbcbc;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff3c00;
+  text-shadow: 0 0 8px #ff3c00, 0 0 15px #ff1e00;
+}
+
+/* Contact Info */
+.footer-contact li {
+  color: #bcbcbc;
+  font-size: 0.95rem;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+  padding-top: 15px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #9f9f9f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,536 @@
+/* 🌟 General Styles */
+.home-page {
+  font-family: "Poppins", sans-serif;
+  background:transparent;
+  color: #ffffffb3;
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* 🔹 Hero Section */
+.hero-section {
+  background: url('./assets/Lamborghini.jpg') center/cover no-repeat;
+  color: rgb(240, 237, 237);
+  text-align: center;
+  padding: 180px 20px 120px; /* extra top padding for navbar */
+  position: relative;
+}
+
+
+  .hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) 60%,   /* top part light, keeps car visible */
+      rgba(0, 0, 0, 0.6) 85%,   /* darker fade near bottom */
+      #000000 100%              /* fully dark to match mission bg */
+    );
+  z-index: 1;
+}
+
+.hero-section * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-section h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+/*Buttons*/
+
+/* 🔹 Explore Tuning Options Button */
+.explore-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff2d2d, #b40a0a);
+  border: 1px solid rgba(255, 50, 50, 0.6);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  box-shadow: 
+    0 0 12px rgba(255, 0, 0, 0.4),
+    inset 0 0 8px rgba(255, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(135deg, #ff3c00, #ff0000);
+  box-shadow: 
+    0 0 20px rgba(255, 60, 0, 0.6),
+    0 0 35px rgba(255, 0, 0, 0.4),
+    inset 0 0 10px rgba(255, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.explore-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+
+
+
+.logout-btn,
+.contact-btn {
+  background: linear-gradient(135deg, #ff2d2d, #b40a0a);
+  border: 1px solid rgba(255, 50, 50, 0.6);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-left:10px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink:0;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3),
+              inset 0 0 8px rgba(255, 0, 0, 0.2);
+}
+
+.logout-btn:hover,
+.contact-btn:hover {
+  background: linear-gradient(135deg, #ff3c00, #ff0000);
+  box-shadow: 0 0 15px rgba(255, 60, 0, 0.6),
+              0 0 25px rgba(255, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+/*cards*/
+.blog-card:hover,
+.network-card:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5),
+              0 0 45px rgba(255, 60, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+
+/* 🔸 Card Titles */
+.blog-card h3,
+.network-card {
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 30, 30, 0.7);
+  margin-bottom: 10px;
+}
+
+/* 🔸 Card Media (Image/Video) */
+.blog-card img,
+.blog-card video,
+.network-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+.blog-card,
+.network-card {
+  background: linear-gradient(145deg, #0e0e0e, #1a0505);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  color: #fff;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+/* 🔹 Mission */
+.mission-section {
+  padding: 80px 100px;
+  color: white;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #1a0707 40%,   /* deep dark red */
+    #2b0a0a 70%,   /* richer red tone */
+    #0a0a0a 100%   /* fade back to black */
+  );
+}
+
+
+.mission-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.mission-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 200px;
+  padding: 40px 0;
+
+}
+
+.mission-img {
+  width: 500px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+/* Neon Hover */
+.mission-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.9), 0 0 60px rgba(255, 0, 0, 0.5);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mission-text-box {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.45);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.mission-content div {
+  flex: 1;
+}
+
+.mission-content h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.mission-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-content li {
+  margin-bottom: 8px;
+}
+
+/* 🔹 Blogs */
+.blogs-section {
+  padding: 80px 40px;
+  text-align: center;
+   background: linear-gradient(
+    to bottom,
+    #0a0a0a 0%,
+    #1f0a05 40%,   /* deep metallic brownish-red */
+    #3b0d0d 70%,   /* darker warm tone */
+    #000000 100%
+  );
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+
+/* 🔹 Network */
+.network-section {
+  padding: 80px 40px;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #210606 30%,   /* subtle red-black tint */
+    #2c0b0b 70%,   /* warm red fade */
+    #000000 100%
+  );
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+}
+
+.network-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+
+
+/* 🔹 Contact Preview */
+.contact-preview {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #210606 30%,   /* subtle red-black tint */
+    #2c0b0b 70%,   /* warm red fade */
+    #000000 100%
+  );
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+}
+@media (max-width: 768px) {
+  .mission-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px; /* smaller gap for mobiles */
+  }
+}
+
+/* 🔥 Engine vibration shake effect */
+.shake-engine {
+  animation: engineShake 0.6s ease;
+}
+
+@keyframes engineShake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Idle engine mild vibration */
+
+@keyframes idleVibe {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  10% { transform: translate(2px, -1px) rotate(-0.2deg); }
+  20% { transform: translate(-2px, 1px) rotate(0.2deg); }
+  30% { transform: translate(3px, 0px) rotate(-0.3deg); }
+  40% { transform: translate(-3px, 2px) rotate(0.3deg); }
+  50% { transform: translate(2px, -2px) rotate(-0.2deg); }
+  60% { transform: translate(-1px, 2px) rotate(0.2deg); }
+  70% { transform: translate(3px, -1px) rotate(0.3deg); }
+  80% { transform: translate(-3px, 1px) rotate(-0.3deg); }
+  90% { transform: translate(1px, -1px) rotate(0.1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.idle-vibe {
+  animation: idleVibe 0.09s infinite linear;
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 150px 20px 100px;
+  }
+
+  .hero-section h1 {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .explore-btn {
+    font-size: 12px;
+    padding: 12px 28px;
+  }
+
+  .mission-section {
+    padding: 60px 40px;
+  }
+
+  .mission-content {
+    gap: 60px;
+  }
+
+  .mission-img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 120px 15px 80px;
+    background-position: center top;
+  }
+
+  .hero-section h1 {
+    font-size: 28px;
+  }
+
+  .hero-section p {
+    font-size: 14px;
+  }
+
+  .explore-btn {
+    font-size: 10px;
+    padding: 10px 22px;
+  }
+
+  .mission-section {
+    padding: 50px 20px;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .mission-img {
+    width: 85%;
+    max-width: 350px;
+  }
+
+  .mission-text-box {
+    padding: 18px;
+  }
+
+  .mission-content h2 {
+    font-size: 22px;
+  }
+
+  .mission-content p,
+  .mission-content li {
+    font-size: 14px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .network-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-preview {
+    padding: 60px 20px;
+  }
+
+  .explore-btn,
+  .contact-btn {
+    width: auto;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 100px 10px 70px;
+  }
+
+  .hero-section h1 {
+    font-size: 24px;
+  }
+
+  .hero-section p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .explore-btn {
+    font-size: 9px;
+    padding: 9px 18px;
+    border-radius: 8px;
+  }
+
+  .mission-img {
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .mission-text-box {
+    padding: 15px;
+  }
+
+  .network-card,
+  .blog-card {
+    padding: 18px;
+  }
+
+  .blog-card h3,
+  .network-card h3 {
+    font-size: 16px;
+  }
+
+  .contact-preview h2 {
+    font-size: 22px;
+  }
+
+  .contact-preview p {
+    font-size: 14px;
+  }
+
+  /* Slightly reduce shake intensity on smaller screens */
+  @keyframes engineShake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-3px); }
+    40% { transform: translateX(3px); }
+    60% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes idleVibe {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    75% { transform: translate(1px, 1px); }
+    100% { transform: translate(0, 0); }
+  }
+}
+@keyframes footerGlow {
+  0% { opacity: 0; box-shadow: 0 0 0 rgba(255, 0, 0, 0); }
+  100% { opacity: 1; box-shadow: 0 0 25px rgba(255, 0, 0, 0.4); }
+}
+
+.footer {
+  animation: footerGlow 1.2s ease-in-out;
+}
+@keyframes footerGlow {
+  0% { opacity: 0; box-shadow: 0 0 0 rgba(255, 0, 0, 0); }
+  100% { opacity: 1; box-shadow: 0 0 25px rgba(255, 0, 0, 0.4); }
+}
+
+.footer {
+  animation: footerGlow 1.2s ease-in-out;
+}

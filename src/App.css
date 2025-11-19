@@ -1,0 +1,32 @@
+/* 🌟 Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: #050505;
+}
+
+/* 🌟 Navbar */
+nav {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #dcdcff;
+}
+nav a.active {
+  border-bottom: 2px solid white;
+}

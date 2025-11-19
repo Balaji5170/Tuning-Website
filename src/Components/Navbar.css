@@ -1,0 +1,232 @@
+/* 🌟 Global Navbar Style */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* ✅ fully transparent */
+  backdrop-filter: none;   /* remove dark blur */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  margin-left: 10px;
+}
+
+.logo span {
+  color: #ff3c00;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* 🔹 Navigation Links */
+.nav-links-home {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 5px;
+  list-style: none;
+  background: transparent; /* ✅ keep links transparent in desktop */
+  box-shadow: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links-home a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(249, 247, 247);
+  transition: 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+.nav-links-home a:hover {
+  color: #ff3c00;
+  text-shadow: 0 0 8px #ff3c00, 0 0 15px #ff1e00;
+}
+
+/* 🔹 Logout Button */
+.logout-btn {
+  background: linear-gradient(135deg, #ff2d2d, #b40a0a);
+  border: 1px solid rgba(255, 50, 50, 0.6);
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3),
+              inset 0 0 8px rgba(255, 0, 0, 0.2);
+  transition: 0.3s ease;
+  margin-right: 50px;
+}
+
+/* 🍔 Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  transition: all 0.4s ease;
+}
+
+/* 🍔 Animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 📱 Responsive Navbar Styling */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav links initially */
+  .nav-links-home {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); /* ✅ transparent glass */
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 50, 50, 0.3);
+    box-shadow: -5px 0 25px rgba(255, 0, 0, 0.3);
+    transition: right 0.4s ease-in-out;
+    gap: 25px;
+    z-index: 1000;
+  }
+
+  /* Show menu when active */
+  .nav-links-home.open {
+    right: 0;
+    background: rgba(0, 0, 0, 0.45); /* slightly more visible on open */
+    backdrop-filter: blur(12px);
+    border-left: 1px solid rgba(255, 0, 0, 0.5);
+    box-shadow: -5px 0 50px rgba(255, 0, 0, 0.4);
+  }
+
+  .nav-links-home a {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .logout-btn {
+    width: 70%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px 0;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4),
+                inset 0 0 8px rgba(255, 0, 0, 0.2);
+  }
+
+  .nav-right .logout-btn {
+    display: none;
+  }
+
+  .navbar {
+    overflow: hidden;
+    max-width: 100vw;
+  }
+}
+
+/* ✅ Desktop layout restored */
+@media (min-width: 1025px) {
+  .nav-links-home {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    justify-content: right;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .logout-btn {
+    display: inline-block;
+  }
+}
+
+/* ⚡ Neon Garage Glow Animation */
+@keyframes neonSlideIn {
+  0% {
+    right: -100%;
+    box-shadow: -10px 0 60px rgba(255, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.3);
+  }
+  40% {
+    box-shadow: -10px 0 90px rgba(255, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
+  }
+  70% {
+    box-shadow: -5px 0 60px rgba(255, 0, 0, 0.5);
+  }
+  100% {
+    right: 0;
+    box-shadow: -5px 0 40px rgba(255, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.45);
+  }
+}
+
+@keyframes neonSlideOut {
+  0% {
+    right: 0;
+    box-shadow: -5px 0 40px rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    right: -100%;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+.nav-links-home {
+  animation: neonSlideOut 0.4s ease-in-out forwards;
+}
+
+.nav-links-home.open {
+  animation: neonSlideIn 0.45s ease-in-out forwards, redPulse 2s infinite ease-in-out;
+}
+
+/* 💓 Soft Neon Pulse While Menu Is Open */
+@keyframes redPulse {
+  0%, 100% { box-shadow: -5px 0 30px rgba(255, 0, 0, 0.3); }
+  50% { box-shadow: -5px 0 50px rgba(255, 0, 0, 0.6); }
+}
